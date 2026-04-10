@@ -34,21 +34,6 @@ A full-stack web application that helps users find jobs based on their skills us
 
 ---
 
-## 📸 Screenshots
-
-### 🔐 Login Page
-
-![Login](./screenshots/login.png)
-
-### 📝 Register Page
-
-![Register](./screenshots/register.png)
-
-### 📊 Dashboard
-
-![Dashboard](./screenshots/dashboard.png)
-
----
 
 ## ⚙️ How to Run Locally
 
