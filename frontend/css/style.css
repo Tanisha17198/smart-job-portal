@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #6366f1;
+  --primary-glow: rgba(99, 102, 241, 0.4);
+  --accent: #0ea5e9;
+  --bg-dark: #000000; /* Force deep black */
+  --bg-card: #0a0a0a; /* Very dark card */
+  --border: rgba(255, 255, 255, 0.05);
+  --text-main: #ffffff;
+  --text-muted: #71717a;
+  --glass: rgba(0, 0, 0, 0.8);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Auth Pages */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.auth-box {
+  background: var(--bg-card);
+  padding: 48px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 50px rgba(99, 102, 241, 0.1);
+}
+
+.auth-box h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: #111;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: white;
+}
+
+.auth-box input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 16px;
+  background: var(--primary);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: black;
+}
+
+.sidebar {
+  width: 260px;
+  background: #000;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.main {
+  flex: 1;
+  padding: 40px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* Job Cards */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  flex: 1;
+}
+
+.job-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.job-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+.job-info { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 20px; }
+
+.tag {
+  background: #111;
+  color: #ccc;
+  padding: 4px 12px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  margin-right: 6px;
+}
+
+.ai-match-v2 {
+  background: #111;
+  border-radius: 15px;
+  padding: 16px;
+  margin: 20px 0;
+}
+
+.pb-bg { height: 6px; background: #222; border-radius: 3px; overflow: hidden; margin-top: 8px; }
+.pb-fill { height: 100%; background: var(--primary); }
+
+.apply-btn-v2 {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  color: black;
+  border-radius: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.apply-btn-v2:hover { background: var(--primary); color: white; }
+
+/* Global Footer */
+.footer-section {
+  margin-top: 60px;
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.footer-links a:hover { color: white; }
+
+/* Sidebar Nav */
+.nav-item {
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.nav-item.active, .nav-item:hover {
+  background: #111;
+  color: white;
+}
+
+.user-info-area {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
